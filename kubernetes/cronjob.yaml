@@ -28,35 +28,35 @@ spec:
             - name: BUCKET_URI
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-bucket
                   key: BUCKET_URI
 
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-key
                   key: AWS_ACCESS_KEY_ID
 
             - name: AWS_SECRET_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-secret
                   key: AWS_SECRET_ACCESS_KEY
 
             - name: AWS_DEFAULT_REGION
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-region
                   key: AWS_DEFAULT_REGION
             
             - name: AWS_ENDPOINT_URL
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-endpoint
                   key: AWS_ENDPOINT_URL
             
             - name: SUBFOLDER
               valueFrom:
                 secretKeyRef:
-                  name: aws
+                  name: aws-subfolder
                   key: SUBFOLDER
