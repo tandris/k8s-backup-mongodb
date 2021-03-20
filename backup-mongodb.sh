@@ -12,7 +12,7 @@ mongodump --oplog \
 	--uri "$MONGODB_URI"
 
 echo "[$SCRIPT_NAME] Uploading compressed archive to S3 bucket..."
-aws s3 cp "$ARCHIVE_NAME" "$BUCKET_URI"
+aws s3 cp "$ARCHIVE_NAME" "$BUCKET_URI/$SUBFOLDER/$ARCHIVE_NAME" --endpoint-url "$AWS_ENDPOINT_URL"
 
 echo "[$SCRIPT_NAME] Cleaning up compressed archive..."
 rm "$ARCHIVE_NAME"
