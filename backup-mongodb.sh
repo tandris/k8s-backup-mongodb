@@ -6,8 +6,7 @@ SCRIPT_NAME=backup-mongodb
 ARCHIVE_NAME=mongodump_$(date +%Y%m%d_%H%M%S).gz
 
 echo "[$SCRIPT_NAME] Dumping all MongoDB databases to compressed archive..."
-mongodump --oplog \
-	--archive="$ARCHIVE_NAME" \
+mongodump --archive="$ARCHIVE_NAME" \
 	--db "$MONGODB_DB_NAME"
 	--gzip \
 	--uri "$MONGODB_URI"
