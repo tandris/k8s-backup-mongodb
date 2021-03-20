@@ -17,7 +17,7 @@ spec:
           
           containers:
           - name: backup-mongodb
-            image: ptuladhar/k8s-backup-mongodb:latest
+            image: tandris/k8s-backup-mongodb:latest
             env:
             - name: MONGODB_URI
               valueFrom:
