@@ -48,4 +48,15 @@ spec:
                 secretKeyRef:
                   name: aws
                   key: AWS_DEFAULT_REGION
-
+            
+            - name: AWS_ENDPOINT_URL
+              valueFrom:
+                secretKeyRef:
+                  name: aws
+                  key: AWS_ENDPOINT_URL
+            
+            - name: SUBFOLDER
+              valueFrom:
+                secretKeyRef:
+                  name: aws
+                  key: SUBFOLDER
